@@ -11,4 +11,4 @@ email_text = st.text_area("أدخل نص الإيميل هنا:")
 if st.button("تحليل"):
     features = vectorizer.transform([email_text])
     prediction = model.predict(features)
-    st.write("النتيجة:", "🚨 Spam" if prediction[0] == "spam" else "✅ Not Spam")
+    st.write("النتيجة:", "🚨 Spam" if prediction[0] == 0 else "✅ Not Spam")
